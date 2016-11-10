@@ -1,0 +1,8 @@
+[
+  {
+    "label": "菜单管理",
+    "path": "/menu"
+  },{
+  "label": "角色管理",
+  "path": "/role"
+}]

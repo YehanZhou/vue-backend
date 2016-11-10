@@ -1,0 +1,20 @@
+[
+  {
+    "label": "字典和常量设置",
+    "children": [{
+      "label": "数据字典",
+      "children": [
+        {
+          "label": "系统字典表",
+          "children": [
+            {
+              "label": "顾客类型",
+              "path": "/customer-level"
+            },{
+              "label": "丢单原因",
+              "path": "/lost-sale-reason"
+            }]
+        }]
+    }]
+  }
+]
