@@ -11,7 +11,7 @@
     box-shadow: none;
   }
   
-  .el-col-6 {
+  .el-col-4 {
     overflow: auto;
   }
   
@@ -77,7 +77,7 @@
       };
     },
     mounted() {
-      var elem = document.getElementsByClassName('el-col-6');
+      var elem = document.getElementsByClassName('el-col-4');
       for (let i = 0, l = elem.length; i < l; i++) {
         elem[i].style.height = document.body.clientHeight - 120 + 'px';
       }
