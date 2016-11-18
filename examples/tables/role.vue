@@ -1,7 +1,10 @@
 <template>
-    <div>
-        <header-component/>
+    <div class="role-content">
         <div>this is template body role</div>
-        <other-component/>
     </div>
 </template>
+<style>
+    .role-content{
+        background-color: red;
+    }
+</style>

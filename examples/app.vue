@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow: hidden;
   }
 
   #app {
@@ -45,14 +46,12 @@
   }
 
   .main-cnt {
-    margin-top: -80px;
-    padding: 80px 0 120px;
+    /*margin-top: -80px;*/
+    /*padding: 80px 0 120px;*/
     box-sizing: border-box;
     min-height: 100%;
   }
   .page-container {
-    /*padding-top: 10px;*/
-
     h2 {
       font-size: 28px;
       color: #1f2d3d;

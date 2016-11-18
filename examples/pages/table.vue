@@ -11,6 +11,10 @@
     box-shadow: none;
   }
   
+  .el-col-6 {
+    overflow: auto;
+  }
+  
   .el-tree {
     border: none;
   }
@@ -18,12 +22,12 @@
   .tab-btn {
     color: #8492a6;
     display: inline-block;
-    padding: 10px;
-    margin-bottom: 12px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
   
   i {
-    font-size: 12px;
-    margin-left: 12px;
+    font-size: 10px;
+    margin-left: 5px;
   }
     
   }
@@ -38,17 +42,17 @@
     <el-tabs type="border-card">
       <el-tab-pane v-for="tab in tabs" :label="tab.label">
         <el-row>
-          <el-col :span="6">
+          <el-col :span="4">
             <side-nav :data="tab.data" base="/table" @handleNodeClick="sideNavClick"></side-nav>
           </el-col>
-          <el-col :span="18">
+          <el-col :span="20">
             <div class="tab-btn" v-for="tab in tabsData" v-bind:class="{'tab-active':tab.isActive}"
                  @click="btnClick(tab)">
               {{tab.label}}
               <i v-if="tab.label !== '首页'" class="el-icon-close" @click.stop="closeTab(tab)"></i>
             </div>
             <router-view class="content"></router-view>
-            <footer-nav></footer-nav>
+            <footer-nav :isShow="$route.path !== '/table/index'"></footer-nav>
           </el-col>
         </el-row>
       </el-tab-pane>
@@ -73,7 +77,15 @@
       };
     },
     mounted() {
-      console.log(navs);
+      var elem = document.getElementsByClassName('el-col-6');
+      for (let i = 0, l = elem.length; i < l; i++) {
+        elem[i].style.height = document.body.clientHeight - 120 + 'px';
+      }
+      window.onresize = function() {
+        for (let i = 0, l = elem.length; i < l; i++) {
+          elem[i].style.height = document.body.clientHeight - 120 + 'px';
+        }
+      };
     },
     methods: {
       sideNavClick(obj) {

@@ -255,7 +255,6 @@
     mounted() {
       this.bindEvents();
       this.doLayout();
-
       this.$ready = true;
     },
 
